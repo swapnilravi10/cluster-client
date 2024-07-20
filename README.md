@@ -1,5 +1,3 @@
-# cluster-client
-
 # Reliable Cluster API Client
 
 ## Introduction
