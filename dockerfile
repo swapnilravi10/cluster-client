@@ -6,4 +6,4 @@ COPY . /app
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "client.py", "create", "group_1"]
+ENTRYPOINT ["python", "client.py"]
