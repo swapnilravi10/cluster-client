@@ -39,10 +39,18 @@ This project implements a reliable client module for interacting with an unstabl
 
 To create a group across all nodes in the cluster:
 ```bash
+cd cluster-client
 python client.py create <groupId>
 ```
 
 To delete a group across all nodes in the cluster:
 ```bash
+cd cluster-client
 python client.py delete <groupId>
+```
+
+To run test case
+```bash
+cd cluster-client
+pytest .\tests\controller\test_cluster_client_controller.py
 ```
