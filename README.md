@@ -49,5 +49,6 @@ python client.py delete <groupId>
 
 To run test case
 ```bash
-pytest .\tests\controller\test_cluster_client_controller.py
+cd tests/controller
+pytest test_cluster_client_controller.py
 ```
