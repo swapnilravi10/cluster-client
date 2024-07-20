@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reliable-cluster-client
+spec:
+  selector:
+    app: reliable-cluster-client
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+    
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reliable-cluster-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reliable-cluster-client
+  template:
+    metadata:
+      labels:
+        app: reliable-cluster-client
+    spec:
+      containers:
+      - name: reliable-cluster-client
+        image: swapnilravi10/reliable-cluster-client:latest
+        args: ["create", "group1"]
+        ports:
+        - containerPort: 8000
+
